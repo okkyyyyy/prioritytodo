@@ -49,11 +49,11 @@ def convert_to_date(date_str):
 valid_tasks = [task for task in tasks if convert_to_date(task.due_date) is not None]
 
 # Add the second submit button
-submit_button2 = st.button("Submit 2", key="submit2")
+submit_button2 = st.button("Prioritize!", key="submit2")
 
 # Check if the second submit button is clicked
 if submit_button2:
-    st.write("Submit 2 button clicked!")
+    st.write("Your tasks are sorted!")
 
 # Sort tasks by due date and priority
 sorted_tasks = sorted(valid_tasks, key=lambda x: (convert_to_date(x.due_date), x.priority == "not important"), reverse=False)
