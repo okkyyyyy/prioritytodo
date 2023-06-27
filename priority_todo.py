@@ -40,7 +40,8 @@ for i in range(1, num_tasks + 1):
 
 # Function to convert the date string to datetime
 
-def convert_to_date(date_str):
+def convert_to_date(date_obj):
+    date_str = date_obj.strftime("%Y-%m-%d")
     try:
         return datetime.strptime(date_str, "%Y-%m-%d")
     except ValueError:
