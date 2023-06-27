@@ -50,8 +50,9 @@ def convert_to_date(date_obj):
     try:
         return datetime.strptime(date_str, "%Y-%m-%d")
     except ValueError:
-        # Invalid date string, return None or handle the error as needed
         return None
+        # Invalid date string, return None or handle the error as needed
+        
 
 
 # Filter out tasks with invalid dates
