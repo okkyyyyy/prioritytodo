@@ -39,15 +39,25 @@ for i in range(1, num_tasks + 1):
     tasks.append(Task(description, due_date, priority))
 
 # Function to convert the date string to datetime
+from datetime import datetime
+
 def convert_to_date(date_str):
     try:
         return datetime.strptime(date_str, "%Y-%m-%d")
     except ValueError:
+        # Invalid date string, return None or handle the error as needed
         return None
+
 
 # Filter out tasks with invalid dates
 valid_tasks = [task for task in tasks if convert_to_date(task.due_date) is not None]
 
+# Add the second submit button
+submit_button2 = st.button("Prioritize!", key="submit2")
+
+# Check if the second submit button is clicked
+if submit_button2:
+    st.write("Your tasks are sorted!")
 
 
 # Sort tasks by due date and priority
