@@ -1,6 +1,11 @@
 import streamlit as st
 from datetime import datetime
 
+st.set_page_config(
+    page_title="TASKBOT",
+    page_icon="📖"
+)
+
 # Create a class for tasks
 class Task:
     def __init__(self, description, due_date, priority):
