@@ -19,6 +19,15 @@ st.title("To-Do List")
 
 # Get the number of tasks from the user
 num_tasks = st.number_input("Enter the number of tasks:", min_value=1, step=1)
+
+# Add a submit button
+submit_button = st.button("Submit")
+
+# Check if the submit button is clicked
+if submit_button:
+    st.write("Submit button clicked!")
+
+
         
 
 # Prompt the user to input task details
