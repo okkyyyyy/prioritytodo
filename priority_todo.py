@@ -34,7 +34,7 @@ if submit_button:
 for i in range(1, num_tasks + 1):
     st.subheader(f"Task {i}:")
     description = st.text_input(f"Enter the task description for Task {i}:", key=f"description_{i}")
-    due_date = st.text_input(f"Enter the due date for Task {i} (YYYY-MM-DD):", key=f"date_{i}")
+    due_date = st.date_input(f"Enter the due date for Task {i} (YYYY-MM-DD):", key=f"date_{i}")
     priority = st.selectbox(f"Select the priority for Task {i}:", ["important", "not important"], key=f"priority_{i}")
     tasks.append(Task(description, due_date, priority))
 
