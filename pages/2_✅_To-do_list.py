@@ -1,7 +1,6 @@
 import streamlit as st
 from datetime import datetime
 
-
 # Create a class for tasks
 class Task:
     def __init__(self, description, due_date, priority):
@@ -28,8 +27,6 @@ submit_button = st.button("Submit")
 if submit_button:
     st.write("Submit button clicked!")
 
-
-
 # Prompt the user to input task details
 for i in range(1, num_tasks + 1):
     st.subheader(f"Task {i}:")
@@ -39,17 +36,11 @@ for i in range(1, num_tasks + 1):
     tasks.append(Task(description, due_date, priority))
 
 # Function to convert the date string to datetime
-
-# Function to convert a date string to a datetime object
 def convert_to_date(date_str):
     try:
         return datetime.strptime(date_str, "%Y-%m-%d")
     except ValueError:
-        # Handle any value error that might occur during the conversion
         return None
-
-        
-
 
 # Filter out tasks with invalid dates
 valid_tasks = [task for task in tasks if convert_to_date(task.due_date) is not None]
@@ -68,6 +59,5 @@ sorted_tasks = sorted(valid_tasks, key=lambda x: (convert_to_date(x.due_date), x
 st.subheader("Sorted Tasks:")
 for task in sorted_tasks:
     st.write(str(task))
-
 
 
