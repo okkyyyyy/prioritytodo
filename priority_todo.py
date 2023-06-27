@@ -67,6 +67,17 @@ st.subheader("Sorted Tasks:")
 for task in sorted_tasks:
     st.write(str(task))
 
-\
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+# Using "with" notation
+with st.sidebar:
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
    
 
