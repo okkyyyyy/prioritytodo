@@ -1,5 +1,5 @@
 import streamlit as st
-import datetime as datetime
+from datetime import datetime
 
 # Create a class for tasks
 class Task:
