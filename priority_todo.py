@@ -23,7 +23,7 @@ num_tasks = st.number_input("Enter the number of tasks:", min_value=1, step=1)
 # Input our data
 with st.form(key='submit_data'):
     date = st.date_input("Date Input") # Input the date
-    weight = st.number_input("Weight",0,200) # Input the weight
+    task = st.task_input("Task") # Input the task
     submitted = st.form_submit_button("Submit")
 if submitted : # if button clicked
         if date in data['date'].values : # if the date specified already exist in our data
