@@ -66,3 +66,14 @@ sorted_tasks = sorted(valid_tasks, key=lambda x: (convert_to_date(x.due_date), x
 st.subheader("Sorted Tasks:")
 for task in sorted_tasks:
     st.write(str(task))
+
+import streamlit as st
+
+# Add a delete button
+delete_button = st.button("Delete")
+
+# Check if the delete button is clicked
+if delete_button:
+    st.write("Delete button clicked!")
+   
+
