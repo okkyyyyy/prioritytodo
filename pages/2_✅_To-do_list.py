@@ -1,4 +1,5 @@
 import streamlit as st
+from datetime import datetime
 
 
 # Create a class for tasks
@@ -28,7 +29,6 @@ if submit_button:
     st.write("Submit button clicked!")
 
 
-from datetime import datetime
 
 # Prompt the user to input task details
 for i in range(1, num_tasks + 1):
@@ -40,13 +40,14 @@ for i in range(1, num_tasks + 1):
 
 # Function to convert the date string to datetime
 
-def convert_to_date(date_obj):
-    date_str = date_obj.strftime("%Y-%m-%d")
+# Function to convert a date string to a datetime object
+def convert_to_date(date_str):
     try:
         return datetime.strptime(date_str, "%Y-%m-%d")
     except ValueError:
+        # Handle any value error that might occur during the conversion
         return None
-        # Invalid date string, return None or handle the error as needed
+
         
 
 
