@@ -1,5 +1,4 @@
 import streamlit as st
-from datetime import datetime
 
 
 # Create a class for tasks
@@ -29,7 +28,7 @@ if submit_button:
     st.write("Submit button clicked!")
 
 
-        
+from datetime import datetime
 
 # Prompt the user to input task details
 for i in range(1, num_tasks + 1):
