@@ -71,9 +71,9 @@ import streamlit as st
 
 # Add a delete button
 delete_button = st.button("Delete")
-description.remove()
-due_date.remove()
-priority.remove()
+self.description.remove()
+self.due_date.remove()
+self.priority.remove()
 
 # Check if the delete button is clicked
 if delete_button:
