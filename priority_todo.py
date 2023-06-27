@@ -67,16 +67,6 @@ st.subheader("Sorted Tasks:")
 for task in sorted_tasks:
     st.write(str(task))
 
-import streamlit as st
-
-# Add a delete button
-delete_button = st.button("Delete")
-self.description.remove()
-self.due_date.remove()
-self.priority.remove()
-
-# Check if the delete button is clicked
-if delete_button:
-    st.write("Delete button clicked!")
+\
    
 
