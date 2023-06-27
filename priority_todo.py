@@ -70,7 +70,7 @@ for task in sorted_tasks:
 import streamlit as st
 
 # Add a delete button
-delete_button = st.button("Delete")
+delete_button = st.button(f"Delete {num_tasks, description, due_date, priority}")
 
 # Check if the delete button is clicked
 if delete_button:
