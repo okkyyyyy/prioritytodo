@@ -19,7 +19,8 @@ st.title("To-Do List")
 
 # Get the number of tasks from the user
 num_tasks = st.number_input("Enter the number of tasks:", min_value=1, step=1)
-
+submitted = st.form_submit_button("Submit")
+        
 
 # Prompt the user to input task details
 for i in range(1, num_tasks + 1):
