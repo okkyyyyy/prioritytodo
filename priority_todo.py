@@ -45,3 +45,8 @@ sorted_tasks = sorted(valid_tasks, key=lambda x: (convert_to_date(x.due_date), x
 st.subheader("Sorted Tasks:")
 for task in sorted_tasks:
     st.write(str(task))
+
+def main():
+    menu = ["Create","Read","Update","Delete","About"]
+    choice = st.sidebar.selectbox("Menu",menu)
+    create_table()
