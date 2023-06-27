@@ -71,7 +71,6 @@ import streamlit as st
 
 # Add a delete button
 delete_button = st.button("Delete")
-num_tasks.remove(num_tasks)
 description.remove(description)
 due_date.remove(due_date)
 priority.remove(priority)
